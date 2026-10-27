@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Open Source Autopilot",
+    "description": "GitHubのissueを取得し、修正を実装し、pull requestを開き、CI、レビュー、マージ準備まで一貫して追跡します。"
+  }
+}
