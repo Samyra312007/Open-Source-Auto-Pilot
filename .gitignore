@@ -1,0 +1,4 @@
+node_modules/
+.oss-autopilot/
+coverage/
+*.log

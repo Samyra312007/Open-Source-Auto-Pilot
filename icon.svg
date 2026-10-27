@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Open Source Autopilot">
+  <defs>
+    <linearGradient id="oss-bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f6f5c"/>
+      <stop offset="1" stop-color="#0d3b34"/>
+    </linearGradient>
+    <linearGradient id="oss-glow" x1="18" y1="14" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7c948"/>
+      <stop offset="1" stop-color="#e8892b"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="15" fill="url(#oss-bg)"/>
+  <path d="M22 18v16c0 4.4 3.6 8 8 8h8" fill="none" stroke="#e9f5ef" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="22" cy="16" r="5" fill="#e9f5ef"/>
+  <circle cx="22" cy="42" r="5" fill="#e9f5ef"/>
+  <circle cx="40" cy="42" r="5" fill="#e9f5ef"/>
+  <path d="M36 18.5l4 4 8-9" fill="none" stroke="url(#oss-glow)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 47h40" stroke="#75d6b4" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+</svg>
