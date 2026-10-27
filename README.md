@@ -153,6 +153,9 @@ On this machine that is usually `C:\Users\<you>\.dsh\oss-autopilot\config.json`.
 | `mergeMethod` | `squash` | `squash`, `merge`, or `rebase`. |
 | `fork` | `true` | Fork automatically when the operator cannot push to the base repo. |
 | `requireAssignment` | `true` | Require formal assignment unless a maintainer explicitly invited work. |
+| `enforceDisclosure` | `true` | Automatically append the AI disclosure marker to PR bodies when it is missing. |
+| `prLabels` | `[]` | Labels applied to newly created or updated pull requests. |
+| `usePrTemplate` | `true` | Prepend the repository's pull request template to generated PR bodies. |
 | `gitAuthorName` / `gitAuthorEmail` | empty | Optional commit identity override. |
 | `disclosure` | AI-assisted disclosure with `{login}` | Public disclosure text. `{login}` is replaced. |
 | `dryRun` | `false` | Block public mutations for a test pass. |
