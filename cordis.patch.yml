@@ -1,0 +1,4 @@
+- insert:
+    - id: oss-autopilot
+      name: 'dsh-plugin-oss-autopilot'
+      config: {}
