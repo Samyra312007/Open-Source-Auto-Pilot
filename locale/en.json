@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Open Source Autopilot",
+    "description": "Claims GitHub issues, implements fixes, opens pull requests, and follows CI, reviews, and merge readiness end to end."
+  }
+}
