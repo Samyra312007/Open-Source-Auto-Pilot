@@ -1,4 +1,5 @@
 import http from 'node:http';
+import crypto from 'node:crypto';
 import { loadConfig, resolveStateRoot, findToken } from './lib/config.js';
 import { GitHubClient } from './lib/github.js';
 import { processWebhook } from './lib/workflow.js';
@@ -33,9 +34,20 @@ const server = http.createServer(async (request, response) => {
   }
   const chunks = [];
   for await (const chunk of request) chunks.push(chunk);
+  const rawBody = Buffer.concat(chunks);
+  const secret = process.env.GITHUB_WEBHOOK_SECRET;
+  if (secret) {
+    const signature = request.headers['x-hub-signature-256'];
+    const expected = `sha256=${crypto.createHmac('sha256', secret).update(rawBody).digest('hex')}`;
+    if (typeof signature !== 'string' || !crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) {
+      response.statusCode = 401;
+      response.end('invalid signature');
+      return;
+    }
+  }
   let payload = {};
   try {
-    payload = JSON.parse(Buffer.concat(chunks).toString('utf8') || '{}');
+    payload = JSON.parse(rawBody.toString('utf8') || '{}');
   } catch {
     response.statusCode = 400;
     response.end('invalid JSON');
