@@ -26,6 +26,10 @@ It is designed for the realistic GitHub model: **maintainers assign issues, revi
 | `oss_stop` | Stops recurring checks without closing the PR or deleting anything. |
 | `oss_batch_status` | Refreshes and aggregates status for multiple runs at once. |
 | `oss_config` | Reads or updates the plugin configuration file. |
+| `oss_batch_claim` | Claims multiple eligible issues in a bounded, rate-limited batch. |
+| `oss_draft_review_replies` | Drafts suggested replies to review comments without posting them. |
+| `oss_metrics` | Summarizes run outcomes and writes a local HTML report. |
+| `oss_handle_webhook` | Processes a GitHub webhook payload for a tracked pull request. |
 | `open-source-autopilot` skill | The full contribution policy and phase-by-phase operating instructions. |
 | Persistent watcher | A DSH schedule reminder wakes the session while a claim or PR is waiting. |
 
