@@ -24,6 +24,8 @@ It is designed for the realistic GitHub model: **maintainers assign issues, revi
 | `oss_sync_status` | Refreshes issue/PR/CI/review state and returns one `next_action`. |
 | `oss_merge` | Re-checks all gates and merges with an expected-head SHA guard. |
 | `oss_stop` | Stops recurring checks without closing the PR or deleting anything. |
+| `oss_batch_status` | Refreshes and aggregates status for multiple runs at once. |
+| `oss_config` | Reads or updates the plugin configuration file. |
 | `open-source-autopilot` skill | The full contribution policy and phase-by-phase operating instructions. |
 | Persistent watcher | A DSH schedule reminder wakes the session while a claim or PR is waiting. |
 
